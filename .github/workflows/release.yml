@@ -1,0 +1,26 @@
+name: Create GitHub Release
+
+# WHEN this runs:
+# - Only when you push a version tag, e.g.:  git tag v1.0.0 && git push --tags
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write   # required to create a release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Automatically creates a GitHub Release with auto-generated
+      # release notes built from merged PRs and commits since the last tag.
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          name: Release ${{ github.ref_name }}
