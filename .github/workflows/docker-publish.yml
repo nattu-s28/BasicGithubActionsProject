@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # Log in to GitHub Container Registry using the automatically
       # provided GITHUB_TOKEN — no manual secret setup needed.

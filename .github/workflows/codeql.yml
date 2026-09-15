@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # GitHub's free, built-in static analysis security scanner.
       # It looks for real vulnerability patterns: SQL injection,
