@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # Automatically creates a GitHub Release with auto-generated
       # release notes built from merged PRs and commits since the last tag.
